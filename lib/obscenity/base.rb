@@ -53,7 +53,7 @@ module Obscenity
         content = @scoped_replacement || Obscenity.config.replacement
         case content
         when :vowels then word.gsub(/[aeiou]/i, '*')
-        when :stars  then '*' * word.size
+        when :stars  then '*' * 5
         when :nonconsonants then word.gsub(/[^bcdfghjklmnpqrstvwxyz]/i, '*')
         when :default, :garbled then '$@!#%'
         else content
